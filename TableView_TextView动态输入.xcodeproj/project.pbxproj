@@ -13,6 +13,8 @@
 		D3A41AC91EC414680012D381 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A41AC71EC414680012D381 /* Main.storyboard */; };
 		D3A41ACB1EC414680012D381 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D3A41ACA1EC414680012D381 /* Assets.xcassets */; };
 		D3A41ACE1EC414680012D381 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3A41ACC1EC414680012D381 /* LaunchScreen.storyboard */; };
+		D3A41AD81EC414C00012D381 /* OKShopSetupContentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A41AD61EC414C00012D381 /* OKShopSetupContentCell.m */; };
+		D3A41AD91EC414C00012D381 /* OKShopSetupContentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3A41AD71EC414C00012D381 /* OKShopSetupContentCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +28,9 @@
 		D3A41ACA1EC414680012D381 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D3A41ACD1EC414680012D381 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D3A41ACF1EC414680012D381 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3A41AD51EC414C00012D381 /* OKShopSetupContentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OKShopSetupContentCell.h; sourceTree = "<group>"; };
+		D3A41AD61EC414C00012D381 /* OKShopSetupContentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OKShopSetupContentCell.m; sourceTree = "<group>"; };
+		D3A41AD71EC414C00012D381 /* OKShopSetupContentCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OKShopSetupContentCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 		D3A41ABD1EC414680012D381 /* TableView_TextView动态输入 */ = {
 			isa = PBXGroup;
 			children = (
+				D3A41AD51EC414C00012D381 /* OKShopSetupContentCell.h */,
+				D3A41AD61EC414C00012D381 /* OKShopSetupContentCell.m */,
+				D3A41AD71EC414C00012D381 /* OKShopSetupContentCell.xib */,
 				D3A41AC11EC414680012D381 /* AppDelegate.h */,
 				D3A41AC21EC414680012D381 /* AppDelegate.m */,
 				D3A41AC41EC414680012D381 /* ViewController.h */,
@@ -141,6 +149,7 @@
 				D3A41ACE1EC414680012D381 /* LaunchScreen.storyboard in Resources */,
 				D3A41ACB1EC414680012D381 /* Assets.xcassets in Resources */,
 				D3A41AC91EC414680012D381 /* Main.storyboard in Resources */,
+				D3A41AD91EC414C00012D381 /* OKShopSetupContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,6 +163,7 @@
 				D3A41AC61EC414680012D381 /* ViewController.m in Sources */,
 				D3A41AC31EC414680012D381 /* AppDelegate.m in Sources */,
 				D3A41AC01EC414680012D381 /* main.m in Sources */,
+				D3A41AD81EC414C00012D381 /* OKShopSetupContentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,6 +283,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W222R58V26;
 				INFOPLIST_FILE = "TableView_TextView动态输入/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lx.TableView-TextView----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -285,6 +296,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = W222R58V26;
 				INFOPLIST_FILE = "TableView_TextView动态输入/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.lx.TableView-TextView----";
 				PRODUCT_NAME = "$(TARGET_NAME)";
