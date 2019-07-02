@@ -72,7 +72,8 @@
         _tableView.tableHeaderView = headerView;
         _tableView.tableFooterView = [[UIView alloc] init];
         [_tableView registerNib:[UINib nibWithNibName:@"OKShopSetupContentCell" bundle:nil] forCellReuseIdentifier:@"contentCellId"];
-        _tableView.estimatedRowHeight = 60;
+#warning 注意这里的预估高度要足够大，否则可能出现输入时跳动的问题
+        _tableView.estimatedRowHeight = 60; //足够大
         _tableView.rowHeight = UITableViewAutomaticDimension;
     }
 
@@ -82,26 +83,16 @@
 - (void)sizeHeaderToFit
 
 {
-    
     UIView *header = self.tableView.tableHeaderView;
-    
     [header setNeedsLayout];
-    
     [header layoutIfNeeded];
-    
     CGFloat height = [header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
     NSLog(@"修改后的高度:%f",height);
     CGRect frame = header.frame;
     
     frame.size.height = height;
-    
     header.frame = frame;
-    
-    UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-    testView.backgroundColor = [UIColor redColor];
-    
     self.tableView.tableHeaderView = header;
-    
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
