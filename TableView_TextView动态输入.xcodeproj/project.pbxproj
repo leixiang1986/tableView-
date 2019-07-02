@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		041CC9BB22CAEA2300B07205 /* OKHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 041CC9BA22CAEA2300B07205 /* OKHeaderView.m */; };
+		041CC9BD22CAEA3200B07205 /* OKHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 041CC9BC22CAEA3200B07205 /* OKHeaderView.xib */; };
+		041CC9C022CAEFBA00B07205 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 041CC9BF22CAEFBA00B07205 /* SecondViewController.m */; };
 		D3A41AC01EC414680012D381 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A41ABF1EC414680012D381 /* main.m */; };
 		D3A41AC31EC414680012D381 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A41AC21EC414680012D381 /* AppDelegate.m */; };
 		D3A41AC61EC414680012D381 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3A41AC51EC414680012D381 /* ViewController.m */; };
@@ -18,6 +21,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		041CC9B922CAEA2300B07205 /* OKHeaderView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OKHeaderView.h; sourceTree = "<group>"; };
+		041CC9BA22CAEA2300B07205 /* OKHeaderView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OKHeaderView.m; sourceTree = "<group>"; };
+		041CC9BC22CAEA3200B07205 /* OKHeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OKHeaderView.xib; sourceTree = "<group>"; };
+		041CC9BE22CAEFBA00B07205 /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
+		041CC9BF22CAEFBA00B07205 /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		D3A41ABB1EC414680012D381 /* TableView_TextView动态输入.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TableView_TextView动态输入.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D3A41ABF1EC414680012D381 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D3A41AC11EC414680012D381 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -70,6 +78,11 @@
 				D3A41AC21EC414680012D381 /* AppDelegate.m */,
 				D3A41AC41EC414680012D381 /* ViewController.h */,
 				D3A41AC51EC414680012D381 /* ViewController.m */,
+				041CC9BE22CAEFBA00B07205 /* SecondViewController.h */,
+				041CC9BF22CAEFBA00B07205 /* SecondViewController.m */,
+				041CC9B922CAEA2300B07205 /* OKHeaderView.h */,
+				041CC9BA22CAEA2300B07205 /* OKHeaderView.m */,
+				041CC9BC22CAEA3200B07205 /* OKHeaderView.xib */,
 				D3A41AC71EC414680012D381 /* Main.storyboard */,
 				D3A41ACA1EC414680012D381 /* Assets.xcassets */,
 				D3A41ACC1EC414680012D381 /* LaunchScreen.storyboard */,
@@ -149,6 +162,7 @@
 				D3A41ACE1EC414680012D381 /* LaunchScreen.storyboard in Resources */,
 				D3A41ACB1EC414680012D381 /* Assets.xcassets in Resources */,
 				D3A41AC91EC414680012D381 /* Main.storyboard in Resources */,
+				041CC9BD22CAEA3200B07205 /* OKHeaderView.xib in Resources */,
 				D3A41AD91EC414C00012D381 /* OKShopSetupContentCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -160,9 +174,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				041CC9C022CAEFBA00B07205 /* SecondViewController.m in Sources */,
 				D3A41AC61EC414680012D381 /* ViewController.m in Sources */,
 				D3A41AC31EC414680012D381 /* AppDelegate.m in Sources */,
 				D3A41AC01EC414680012D381 /* main.m in Sources */,
+				041CC9BB22CAEA2300B07205 /* OKHeaderView.m in Sources */,
 				D3A41AD81EC414C00012D381 /* OKShopSetupContentCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +338,7 @@
 				D3A41AD41EC414680012D381 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

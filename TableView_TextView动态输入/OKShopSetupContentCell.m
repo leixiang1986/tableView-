@@ -39,7 +39,6 @@
     [tableView endUpdates];
 }
 
-
 - (UITableView *)tableView
 {
     UIView *tableView = self.superview;

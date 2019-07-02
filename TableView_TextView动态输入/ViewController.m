@@ -7,11 +7,13 @@
 //
 
 #import "ViewController.h"
+#import "OKHeaderView.h"
 #import "OKShopSetupContentCell.h"
+#import "SecondViewController.h"
 
 @interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
 @property (nonatomic, strong) UITableView *tableView;
-
+@property (nonatomic, strong) OKHeaderView *headerView;
 @end
 
 @implementation ViewController
@@ -46,14 +48,28 @@
     return keyboardSize.height ;
 }
 
-
-
 - (UITableView *)tableView {
     if (!_tableView) {
         CGSize size = [UIScreen mainScreen].bounds.size;
         _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height) style:(UITableViewStylePlain)];
         _tableView.delegate = self;
         _tableView.dataSource = self;
+        OKHeaderView *headerView = [[[NSBundle mainBundle] loadNibNamed:@"OKHeaderView" owner:nil options:nil] lastObject];
+        CGSize headerSize = [headerView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize];
+        NSLog(@"size:%@",NSStringFromCGSize(headerSize));
+        __weak typeof(self) weakSelf = self;
+        [headerView setUpdateHeightBlock:^(CGFloat height) {
+#warning 方法一
+            [weakSelf sizeHeaderToFit];
+#warning 方法二 这个方法要在headerView中修改TextView的高度约束
+//            [weakSelf.headerView setNeedsLayout];
+//            [weakSelf.headerView layoutIfNeeded];
+//            weakSelf.headerView.frame = CGRectMake(0, 0, weakSelf.headerView.frame.size.width, height);
+//            weakSelf.tableView.tableHeaderView = weakSelf.headerView;
+        }];
+        _headerView = headerView;
+        headerView.bounds = CGRectMake(0, 0, size.width, headerSize.height);
+        _tableView.tableHeaderView = headerView;
         _tableView.tableFooterView = [[UIView alloc] init];
         [_tableView registerNib:[UINib nibWithNibName:@"OKShopSetupContentCell" bundle:nil] forCellReuseIdentifier:@"contentCellId"];
         _tableView.estimatedRowHeight = 60;
@@ -63,6 +79,30 @@
     return _tableView;
 }
 
+- (void)sizeHeaderToFit
+
+{
+    
+    UIView *header = self.tableView.tableHeaderView;
+    
+    [header setNeedsLayout];
+    
+    [header layoutIfNeeded];
+    
+    CGFloat height = [header systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+    NSLog(@"修改后的高度:%f",height);
+    CGRect frame = header.frame;
+    
+    frame.size.height = height;
+    
+    header.frame = frame;
+    
+    UIView *testView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+    testView.backgroundColor = [UIColor redColor];
+    
+    self.tableView.tableHeaderView = header;
+    
+}
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
@@ -84,7 +124,8 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [self.view endEditing:YES];
-    
+    SecondViewController *vc = [[SecondViewController alloc] init];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {
